@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'iransansweb_light';
+    src: url('../fonts/iransansweb_light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'iransansweb_regular';
+    src: url('../fonts/iransansweb_regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'iransansweb_bold';
+    src: url('../fonts/iransansweb_bold.woff2') format('woff2');
+}
+
+*,
+body {
+    font-family: 'iransansweb_regular' !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'iransansweb_bold' !important;
+    color: #333333;
+}
+
+main {
+    flex-grow: 1;
+}
+
+p,
+span {
+    color: #545454;
+}
+
+.video-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.z-index-high {
+    z-index: 1025 !important;
+}
+
+.top-px-80 {
+    top: 80px !important;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ellipsis-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
