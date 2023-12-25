@@ -2,22 +2,22 @@
 
 namespace App\View\Components;
 
-use App\Models\Video;
+use App\Http\Controllers\CategoryVideoController;
+use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class relatedVideos extends Component
+class HeaderMenu extends Component
 {
-    public $videos;
+    public $categories;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(Video $video)
+    public function __construct()
     {
-        $currentVideoSlug = $video->slug;
-        $this->videos = $video->relatedVideos(5, $currentVideoSlug);
+        $this->categories = Category::all();
     }
 
     /**
@@ -25,6 +25,6 @@ class relatedVideos extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.related-videos');
+        return view('components.header-menu');
     }
 }

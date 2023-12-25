@@ -17,31 +17,31 @@ class CategorySeeder extends Seeder
         $categories = [
             'سینما' => [
                 'slug' => 'cinema',
-                'icon' => 'fa fa-film'
+                'icon' => 'bi bi-camera-reels'
             ],
             'طنز' => [
                 'slug' => 'fun',
-                'icon' => 'fa fa-smile-o'
+                'icon' => 'bi bi-emoji-smile'
             ],
             'بازی' => [
                 'slug' => 'game',
-                'icon' => 'fa fa-gamepad'
+                'icon' => 'bi bi-controller'
             ],
             'ورزشی' => [
                 'slug' => 'sport',
-                'icon' => 'fa fa-futbol-o'
+                'icon' => 'bi bi-person-arms-up'
             ],
             'وحشت' => [
                 'slug' => 'horror',
-                'icon' => 'fa fa-hashtag'
+                'icon' => 'bi bi-hash'
             ],
             'تکنولوژی' => [
                 'slug' => 'technology',
-                'icon' => 'fa fa-laptop'
+                'icon' => 'bi bi-laptop'
             ],
             'تاریخی' => [
                 'slug' => 'historical',
-                'icon' => 'fa fa-university'
+                'icon' => 'bi bi-book-half'
             ],
         ];
 

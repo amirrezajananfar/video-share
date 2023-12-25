@@ -10,6 +10,8 @@ class Video extends Model
 {
     use HasFactory;
 
+    protected $perPage = 12;
+
     protected $fillable = ['name', 'length', 'slug', 'url', 'thumbnail', 'description', 'category_id'];
 
     public function getRouteKeyName()
@@ -27,9 +29,9 @@ class Video extends Model
         return (new Verta($value))->formatDifference();
     }
 
-    public function relatedVideos(int $count = 3)
+    public function relatedVideos(int $count = 5, $currentVideoSlug)
     {
-        return Video::all()->random($count);
+        return $this->category->getRandomVideos($count, $currentVideoSlug);
     }
 
     public function category()

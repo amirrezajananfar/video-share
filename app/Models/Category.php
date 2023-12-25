@@ -18,4 +18,13 @@ class Category extends Model
     {
         return 'slug';
     }
+
+    public function getRandomVideos($count = 5, $currentVideoSlug)
+    {
+        return $this->videos()
+            ->where('slug', '!=', $currentVideoSlug)
+            ->inRandomOrder()
+            ->get()
+            ->take($count);
+    }
 }
