@@ -51,6 +51,18 @@
                                     <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="@lang('videos/edit_video_form.edit_video_thumbnail_placeholder')" value="{{ $video->thumbnail }}" required>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="category_id" class="form-label">@lang('videos/edit_video_form.edit_video_category')</label>
+                                    <select class="form-select" id="category_id" name="category_id">
+                                        @foreach($categories as $categoryOption)
+                                        <option value="{{ $categoryOption->id }}" {{ $video->category_id == $categoryOption->id ? 'selected' : '' }}>
+                                            {{ $categoryOption->name }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="mb-4">

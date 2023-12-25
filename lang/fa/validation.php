@@ -38,8 +38,8 @@ return [
     'doesnt_start_with' => 'فیلد :attribute نباید با یکی از موارد زیر شروع شود: :values.',
     'email' => 'فیلد :attribute باید یک آدرس ایمیل معتبر باشد.',
     'ends_with' => 'فیلد :attribute باید با یکی از موارد زیر پایان یابد: :values.',
-    'enum' => 'انتخابی :attribute انتخاب شده نامعتبر است.',
-    'exists' => 'انتخابی :attribute انتخاب شده نامعتبر است.',
+    'enum' => ':attribute انتخاب شده نامعتبر است.',
+    'exists' => ':attribute انتخاب شده نامعتبر است.',
     'file' => 'فیلد :attribute باید یک فایل باشد.',
     'filled' => 'فیلد :attribute باید مقدار داشته باشد.',
     'gt' => [
@@ -150,6 +150,7 @@ return [
         'slug' => 'نام یکتا',
         'url' => 'آدرس اینترنتی',
         'thumbnail' => 'تصویر بندانگشتی',
-        'description' => 'توضیحات'
+        'description' => 'توضیحات',
+        'category_id' => 'دسته بندی'
     ],
 ];

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('videos', function (Blueprint $table) {
-            $table->text('description')->after('slug')->nullable();
+            $table->foreignId('category_id')->after('length')->nullable()->constrained()->nullOnDelete();
         });
     }
 
@@ -22,7 +22,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('videos', function (Blueprint $table) {
-            $table->dropColumn('description');
+            $table->dropForeign('category_id');
+            $table->dropColumn('category_id');
         });
     }
 };

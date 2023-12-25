@@ -14,5 +14,6 @@ return [
     'new_video_thumbnail_placeholder' => 'آدرس اینترنتی تصویر بند انگشتی ویدیو را بنویسید',
     'new_video_description' => 'توضیحات ویدیو',
     'new_video_description_placeholder' => 'توضیحات مربوط به ویدیو را بنویسید',
+    'new_video_category' => 'دسته بندی ویدیو',
     'new_video_submit_button' => 'ثبت اطلاعات ویدیو'
 ];

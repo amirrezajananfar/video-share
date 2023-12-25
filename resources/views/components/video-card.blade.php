@@ -4,6 +4,11 @@
             <img src="{{ url($video->thumbnail) }}" class="card-img-top" alt="{{ $video->name }}">
             <span class="bg-white rounded-pill position-absolute start-0 text-secondary px-2 m-2">{{ $video->lengthInHuman }}</span>
         </a>
+        <div class="bg-warning text-center p-1">
+            <a href="{{ route('categories.videos.index', $video->categorySlug) }}" class="link-underline link-underline-opacity-0">
+                <span class="text-light">@lang('videos/video_card.video_card_category_perfix') {{ $video->CategoryName ?? "@lang('videos/video_card.video_card_category_on_none')" }}</span>
+            </a>
+        </div>
         <div class="card-body text-center lh-lg d-flex flex-column align-items-center justify-content-between">
             <div class="d-flex justify-content-around align-items-center mb-3">
                 <div>
