@@ -1,7 +1,7 @@
 <div class="col-lg-2 col-md-4 col-sm-6">
     <div class="video-item">
         <div class="thumb">
-            <small class="time">{{ $video->length }}</small>
+            <small class="time">{{ $video->lengthInHuman }}</small>
             <a href="{{ route('videos.show', $video->slug) }}">
                 <img src="{{ $video->thumbnail }}" alt="{{ $video->title }}">
             </a>
