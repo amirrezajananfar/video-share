@@ -108,7 +108,7 @@
     </div>
 
     <div class="site-output">
-        @yield('content')
+        {{ $content ?? '' }}
     </div>
 </body>
 
