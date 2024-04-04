@@ -12,31 +12,31 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>عنوان</label>
-                                    <input type="text" class="form-control" name="title" placeholder="عنوان">
+                                    <label>@lang('videos.title')</label>
+                                    <input type="text" class="form-control" name="title" placeholder="@lang('videos.title')">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>مدت زمان</label>
-                                    <input type="text" class="form-control" name="length" placeholder="مدت زمان">
+                                    <label>@lang('videos.length')</label>
+                                    <input type="text" class="form-control" name="length" placeholder="@lang('videos.length')">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>نام یکتا</label>
-                                    <input type="text" class="form-control" name="slug" placeholder="نام یکتا">
+                                    <label>@lang('videos.slug')</label>
+                                    <input type="text" class="form-control" name="slug" placeholder="@lang('videos.slug')">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>آدرس ویدیو</label>
-                                    <input type="text" class="form-control" name="url" placeholder="آدرس ویدیو">
+                                    <label>@lang('videos.url')</label>
+                                    <input type="text" class="form-control" name="url" placeholder="@lang('videos.url')">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>تصویر بند‌انگشتی</label>
-                                    <input type="text" class="form-control" name="thumbnail" placeholder="تصویر بند انگشتی">
+                                    <label>@lang('videos.thumbnail')</label>
+                                    <input type="text" class="form-control" name="thumbnail" placeholder="@lang('videos.thumbnail')">
                                 </div>
                                 <div class="col-md-12">
-                                    <label>توضیحات</label>
-                                    <textarea class="form-control" rows="4" name="description" placeholder="توضیح"></textarea>
+                                    <label>@lang('videos.description')</label>
+                                    <textarea class="form-control" rows="4" name="description" placeholder="@lang('videos.description')"></textarea>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="submit" class="btn btn-dm" value="ذخیره اطلاعات">
+                                    <input type="submit" class="btn btn-dm" value="@lang('videos.submit')">
                                 </div>
                             </div>
                         </form>

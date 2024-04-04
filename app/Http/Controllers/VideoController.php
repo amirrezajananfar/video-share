@@ -29,6 +29,6 @@ class VideoController extends Controller
         ]);
 
         Video::create($request->all());
-        return redirect()->route('index')->with('status', 'عملیات با موفقیت انجام شد.');
+        return redirect()->route('index')->with('status', __('messages.success'));
     }
 }
