@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="content">
+        <x-validation-error />
         <div id="all-output" class="col-md-12 upload">
             <div id="upload">
                 <div class="row">
