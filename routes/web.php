@@ -11,6 +11,8 @@ Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 Route::post('/videos', [VideoController::class, 'store'])->name('videos.store');
 Route::get('/videos/create', [VideoController::class, 'create'])->name('videos.create');
 Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.show');
+Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
+Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
