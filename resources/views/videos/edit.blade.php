@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>@lang('videos.length')</label>
-                                    <input type="text" class="form-control" name="length" value="{{ old('title', $video->length) }}" placeholder="@lang('videos.length')">
+                                    <input type="text" class="form-control" name="length" value="{{ old('length', $video->length) }}" placeholder="@lang('videos.length')">
                                 </div>
                                 <div class="col-md-6">
                                     <label>@lang('videos.slug')</label>
