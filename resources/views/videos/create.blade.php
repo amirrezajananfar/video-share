@@ -7,34 +7,35 @@
                         <h1 class="page-title">
                             <span>آپلود</span> ویدیو
                         </h1>
-                        <form>
+                        <form action="{{ url('/videos') }}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>عنوان</label>
-                                    <input type="text" class="form-control" placeholder="عنوان">
+                                    <input type="text" class="form-control" name="title" placeholder="عنوان">
                                 </div>
                                 <div class="col-md-6">
                                     <label>مدت زمان</label>
-                                    <input type="text" class="form-control" placeholder="مدت زمان">
+                                    <input type="text" class="form-control" name="length" placeholder="مدت زمان">
                                 </div>
                                 <div class="col-md-6">
                                     <label>نام یکتا</label>
-                                    <input type="text" class="form-control" placeholder="نام یکتا">
+                                    <input type="text" class="form-control" name="slug" placeholder="نام یکتا">
                                 </div>
                                 <div class="col-md-6">
                                     <label>آدرس ویدیو</label>
-                                    <input type="text" class="form-control" placeholder="آدرس ویدیو">
+                                    <input type="text" class="form-control" name="url" placeholder="آدرس ویدیو">
                                 </div>
                                 <div class="col-md-6">
                                     <label>تصویر بند‌انگشتی</label>
-                                    <input type="text" class="form-control" placeholder="تصویر بند انگشتی">
+                                    <input type="text" class="form-control" name="thumbnail" placeholder="تصویر بند انگشتی">
                                 </div>
                                 <div class="col-md-12">
                                     <label>توضیحات</label>
-                                    <textarea class="form-control" rows="4" placeholder="توضیح"></textarea>
+                                    <textarea class="form-control" rows="4" name="description" placeholder="توضیح"></textarea>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="button" id="contact_submit" class="btn btn-dm">ذخیره</button>
+                                    <input type="submit" class="btn btn-dm" value="ذخیره اطلاعات">
                                 </div>
                             </div>
                         </form>
