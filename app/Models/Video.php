@@ -13,4 +13,9 @@ class Video extends Model
     {
         return gmdate('i:s', $value);
     }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return verta($value)->formatDifference();
+    }
 }
