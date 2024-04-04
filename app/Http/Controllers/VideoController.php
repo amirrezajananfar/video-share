@@ -24,4 +24,9 @@ class VideoController extends Controller
         Video::create($request->all());
         return redirect()->route('index')->with('status', __('messages.success'));
     }
+
+    public function show(Request $request, Video $video)
+    {
+        return view('videos.show', compact('video'));
+    }
 }

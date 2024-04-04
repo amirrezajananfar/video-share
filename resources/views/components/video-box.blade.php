@@ -2,12 +2,12 @@
     <div class="video-item">
         <div class="thumb">
             <small class="time">{{ $video->length }}</small>
-            <a href="{{ url($video->slug) }}">
+            <a href="{{ route('videos.show', $video->slug) }}">
                 <img src="{{ $video->thumbnail }}" alt="{{ $video->title }}">
             </a>
         </div>
         <div class="video-info">
-            <a href="{{ url($video->slug) }}" class="title">{{ $video->title }}</a>
+            <a href="{{ route('videos.show', $video->slug) }}" class="title">{{ $video->title }}</a>
             <a class="channel-name" href="#">مهرداد سامی
                 <span>
                     <i class="fa fa-check-circle"></i>
