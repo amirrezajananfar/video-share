@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label>@lang('videos.description')</label>
-                                    <textarea class="form-control" rows="4" name="description" value="{{ old('description') }}" placeholder="@lang('videos.description')"></textarea>
+                                    <textarea class="form-control" rows="4" name="description" placeholder="@lang('videos.description')">{{ old('description') }}</textarea>
                                 </div>
                                 <div class="col-md-2">
                                     <input type="submit" class="btn btn-dm" value="@lang('videos.submit')">
