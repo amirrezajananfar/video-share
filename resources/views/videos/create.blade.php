@@ -7,7 +7,7 @@
                         <h1 class="page-title">
                             <span>آپلود</span> ویدیو
                         </h1>
-                        <form action="{{ url('/videos') }}" method="post">
+                        <form action="{{ route('videos.store') }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
