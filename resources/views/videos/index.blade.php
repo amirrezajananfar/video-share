@@ -6,6 +6,9 @@
                 <x-video-box :video="$video" />
                 @endforeach
             </div>
+            <div class="row text-center mx-auto">
+                {{ $videos->links() }}
+            </div>
         </div>
     </x-slot>
 </x-layout>
