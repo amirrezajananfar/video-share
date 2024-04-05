@@ -26,13 +26,13 @@ class Video extends Model
         return verta($value)->formatDifference();
     }
 
-    public function relatedVideos(int $count = 6)
-    {
-        return $this->all()->random($count);
-    }
-
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function relatedVideos(int $count = 6)
+    {
+        return $this->category ? $this->category->getRandomVideos($count) : $this->inRandomOrder()->get()->take($count);
     }
 }
