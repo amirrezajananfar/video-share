@@ -30,4 +30,9 @@ class Video extends Model
     {
         return $this->all()->random($count);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
