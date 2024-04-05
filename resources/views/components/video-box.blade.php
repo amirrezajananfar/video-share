@@ -19,6 +19,11 @@
             <span class="date">
                 <i class="fa fa-clock-o"></i>{{ $video->created_at }}
             </span>
+            @if ($video->category?->title)
+            <span class="date">
+                <i class="fa fa-tag"></i>{{ $video->category->title }}
+            </span>
+            @endif
         </div>
     </div>
 </div>
