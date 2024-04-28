@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function getGravatarAttribute()
+    {
+        $hash = md5($this->attributes['email']);
+        return "https://s.gravatar.com/avatar/$hash?s=80";
+    }
 }

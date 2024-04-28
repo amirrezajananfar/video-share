@@ -37,36 +37,32 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-5 hidden-xs hidden-sm"></div>
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm"></div>
+                @auth
                 <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb">
-                                <img src="https://s.gravatar.com/avatar/dfca86228f1ed5f0554827a8d907172a?s=80" alt="">
+                                <img src="{{ auth()->user()->gravatar }}" alt="{{ auth()->user()->name }}">
                             </div>
-                            <h2>مهرداد سامی</h2>
+                            <h2>{{ auth()->user()->name }}</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu account-menu">
-                            <li><a href="#">
+                            <li>
+                                <a href="{{ route('profile.edit') }}">
                                     <i class="fa fa-edit color-1"></i>
                                     ویرایش پروفایل
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('videos.create') }}">
                                     <i class="fa fa-video-camera color-2"></i>
                                     اضافه کردن فیلم
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fa fa-star color-3"></i>
-                                    برگزیده
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a href="{{ url('logout') }}">
                                     <i class="fa fa-sign-out color-4"></i>
                                     خروج
                                 </a>
@@ -74,6 +70,17 @@
                         </ul>
                     </div>
                 </div>
+                @endauth
+                @guest
+                <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                    <a href="{{ url('login') }}">
+                        <button class="btn btn-white">
+                            <i class="fa fa-user"></i>
+                            حساب کاربری
+                        </button>
+                    </a>
+                </div>
+                @endguest
             </div>
         </div>
     </header>
