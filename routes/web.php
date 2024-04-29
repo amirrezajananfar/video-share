@@ -4,6 +4,9 @@ use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
+use App\Mail\LoginAlert;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
@@ -18,6 +21,7 @@ Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos
 Route::get('/categories/{category}/videos', [CategoryVideoController::class, 'index'])->name('categories.videos.index');
 
 Route::get('/dashboard', function () {
+    Mail::to(Auth::user())->send(new LoginAlert(Auth::user()));
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
