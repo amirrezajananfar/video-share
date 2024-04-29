@@ -11,7 +11,7 @@
         <div style="display: flex;gap: 5px;">
             <a class="channel-name" href="#">
                 <span>
-                    <i class="fa fa-check-circle"></i> داود طاهری
+                    <i class="fa fa-user"></i> {{ $video->author_name }}
                 </span>
             </a>
             @if ($video->category?->title)

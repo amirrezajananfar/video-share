@@ -35,4 +35,19 @@ class Video extends Model
     {
         return $this->category ? $this->category->getRandomVideos($count) : $this->inRandomOrder()->get()->take($count);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function getAuthorNameAttribute()
+    {
+        return $this->user->name ?? 'نامشخص';
+    }
+
+    public function getAuthorAvatarAttribute()
+    {
+        return $this->user?->gravatar;
+    }
 }

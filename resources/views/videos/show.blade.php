@@ -64,11 +64,11 @@
                         <div class="chanel-item">
                             <div class="chanel-thumb">
                                 <a href="#">
-                                    <img src="{{ Vite::asset('resources/images/ch-1.jpg') }}" alt="">
+                                    <img src="{{ $video->author_avatar }}" alt="">
                                 </a>
                             </div>
                             <div class="chanel-info">
-                                <a class="title" href="#">داود طاهری</a>
+                                <a class="title" href="#">{{ $video->author_name }}</a>
                                 <span class="subscribers">436,414 اشتراک</span>
                             </div>
                             <a href="#" class="subscribe">اشتراک</a>
