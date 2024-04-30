@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
+use App\Http\Middleware\VerifyEmail;
 use App\Mail\LoginAlert;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -13,7 +14,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 Route::post('/videos', [VideoController::class, 'store'])->name('videos.store');
-Route::get('/videos/create', [VideoController::class, 'create'])->name('videos.create');
+Route::get('/videos/create', [VideoController::class, 'create'])->middleware('verify-email')->name('videos.create');
 Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.show');
 Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
 Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
